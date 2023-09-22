@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="communication.css">
+        <style media="screen">
+            *,
+      *:before,
+      *:after{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+      }
+      
+      .popup{
+          background-color: #ffffff;
+          width: 520px;
+          padding: 30px 40px;
+          position: absolute;
+          transform: translate(-50%,-50%);
+          left: 50%;
+          top: 50%;
+          height: 300px;
+          border-radius: 8px;
+          font-family: "Poppins",sans-serif;
+          display: none; 
+          text-align: center;
+      }
+      .popup .closebtn{
+          display: block;
+          margin:  0 0 20px auto;
+          background-color: transparent;
+          font-size: 30px;
+          color: #ffffff;
+          background: #03549a;
+          border-radius: 100%;
+          width: 40px;
+          height: 40px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+      }
+      .butt {
+          width: 180px;
+          height: 30px;
+          color: black;
+          background-color: skyblue;
+          font-size: 15px;
+          text-align: center;
+          border-radius: 8px;
+          border-width: 0;
+          margin-top: 19px;
+      }
+      .popup h2{
+        margin-top: -20px;
+      }
+      .popup p{
+          font-size: 22px;
+          text-align: justify;
+          margin: 20px 0;
+          line-height: 25px;
+      }
+      
+          </style>
+
+    </head>
+    <body>
+
+        <header class="header">
+   
+            <section class="flex">
+         
+               <a href="home" class="logo">Elite Six</a>
+         
+               <form action="search" method="post" class="search-form">
+                  <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+                  <button type="submit" class="fas fa-search"></button>
+               </form>
+               <div class="google_translate_option" id="google_translate_element"></div>
+
+         
+               <div class="icons">
+                  <div id="menu-btn" class="fas fa-bars"></div>
+                  <div id="search-btn" class="fas fa-search"></div>
+                  <div id="user-btn" class="fas fa-user"></div>
+                  <div id="toggle-btn" class="fas fa-sun"></div>
+               </div>
+         
+               <div class="profile">
+                  <img src="Images/student profile.png" class="image" alt="">
+                  <h3 class="name">Harsha</h3>
+                  <p class="role">Student</p>
+                  <a href="profile" style="background-color: #8e44ad;" class="btn">View Profile</a>
+                  <div class="flex-btn">
+                     <a href="login" class="option-btn">Login</a>
+                     <a href="register" class="option-btn">Register</a>
+                  </div>
+               </div>
+         
+            </section>
+         
+         </header>   
+         
+         <div class="side-bar">
+         
+            <div id="close-btn">
+               <i class="fas fa-times"></i>
+            </div>
+         
+            <div class="profile">
+               <img src="Images/student profile.png" class="image" alt="">
+               <h3 class="name">Harsha</h3>
+               <p class="role">Student</p>
+               <a href="profile" id="btnn">view profile</a>
+            </div>
+         
+            <nav class="navbar">
+                <a href="dashboard"><i class="fas fa-home"></i><span>Dashboard</span></a>
+                <a href="courses"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+                <a href="studymaterials"><i class="fas fa-book"></i><span>Study Materials</span></a>
+                <a href="teacherprofile"><i class="fas fa-chalkboard-user"></i><span>Mentor Details</span></a>
+                <a href="communication"><i class="fas fa-address-book"></i><span>Communication</span></a>
+                <a href="loans"><i class="fa fa-university" aria-hidden="true"></i><span>Loans and Grants</span></a>              
+                <a href="help"><i class="fas fa-info"></i><span>Help</span></a>
+               </nav>
+         
+         </div>
+         <div class="popup">
+            <button class="closebtn" id="close">&times;</button>
+            <div class="quotes">
+                <p id="quote">Something of great value which needs to be treated carelessly</p>
+                <h3 style="font-size: 30px;" id="author">-Precious</h3>
+                <div>
+                  <button class="butt" onclick="generate()" type="button" >Generate Another Word</button>
+                </div>
+            </div>
+        </div>
+
+         <div class="app">
+            <h1>Daily Quiz</h1>
+            <div class="quiz">
+                <h2 id="question">Question goes here</h2>
+                <div id="answer-buttons">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                </div>
+                <button id="next-btn">Next</button>
+            </div> 
+
+        </div>  
+        <script>
+            function googleTranslateElementInit() {
+           new google.translate.TranslateElement({
+             pageLanguage: 'en', // Default page language
+             includedLanguages: 'en,hi,ml,mr,ta,te,ur', // List of supported languages
+             autoDisplay: false, // Disable automatic translation display
+           }, 'google_translate_element');
+         }
+         
+         </script>
+        <script>
+            const questions=[
+    {
+        question: "What's the correct past form of 'visit' ?",
+        answers: [
+            {text: "Visitted", correct: false},
+            {text: "Visit", correct: false},
+            {text: "Visiteed", correct:false},
+            {text: "Visited", correct: true},
+        ]
+        
+    },
+    {
+        question: "Which is the correct sentence?",
+        answers: [
+            {text: "I am twenty years old", correct: true},
+            {text: "I am twenty years", correct: false},
+            {text: "I have twentieth years old", correct:false},
+            {text: "I am old of twenty years", correct: false},
+        ]
+       
+    },
+    {
+        question: "Choose the correct present perfect question.",
+        answers: [
+            {text: "Have you being in New York?", correct: false},
+            {text: "Have you ever been to New York?", correct: true},
+            {text: "I have been living in New York?", correct:false},
+            {text: "I have been in New York", correct: false},
+        ]
+       
+    },
+    {
+        question: "What's the past participle of 'write'?",
+        answers: [
+            {text: "Written", correct: true},
+            {text: "Writed", correct: false},
+            {text: "Writen", correct:false},
+            {text: "Wroten", correct: false},
+        ]
+       
+    },
+    
+    {
+        question: "The sister of my mom is my________.",
+        answers: [
+            {text: "Aunt", correct: true},
+            {text: "Mom", correct: false},
+            {text: "Sister", correct:false},
+            {text: "Neice", correct: false},
+        ]
+       
+    },
+       
+];
+const questionElement =document.getElementById("question");
+const answerButtons=document.getElementById("answer-buttons");
+const nextButton=document.getElementById("next-btn");
+ 
+let currentQuestionIndex=0;
+let score=0;
+
+function startQuiz(){
+    currentQuestionIndex=0;
+    score=0;
+    nextButton.innerHTML="Next";
+    showQuestion();
+}
+function showQuestion()
+{
+    resetState();
+    let currentQuestion=questions[currentQuestionIndex];
+    let questionNo=currentQuestionIndex +1;
+    questionElement.innerHTML=questionNo+"."+ currentQuestion.question;
+    
+    currentQuestion.answers.forEach(answer => {
+        const button=document.createElement("button");
+        button.innerHTML=answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct=answer.correct;
+        }
+        button.addEventListener("click",selectAnswer);
+    });
+}
+function resetState(){
+    nextButton.style.display="none";
+    while(answerButtons.firstChild){
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+}
+function selectAnswer(e){
+    const selectedBtn =e.target;
+    const isCorrect =selectedBtn.dataset.correct ==="true";
+    if(isCorrect){
+        selectedBtn.classList.add("correct");
+        score++;
+    }
+    else{
+        selectedBtn.classList.add("incorrect");
+    }
+    Array.from(answerButtons.children).forEach(button =>{
+        if(button.dataset.correct==="true"){
+            button.classList.add("correct");
+        }
+        button.disabled=true;
+    });
+    nextButton.style.display="block";
+}
+function showScore(){
+    resetState();
+    questionElement.innerHTML=`You scored ${score} out of ${questions.length} questions.`;
+    nextButton.innerHTML="Play Again";
+    nextButton.style.display="block";
+}
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }
+    else{
+        showScore();
+    }
+}
+nextButton.addEventListener("click",()=>{
+    if(currentQuestionIndex < questions.length){
+    handleNextButton();
+    }
+    else{
+        startQuiz();
+    }
+})
+startQuiz();
+let toggleBtn = document.getElementById('toggle-btn');
+let body = document.body;
+let darkMode = localStorage.getItem('dark-mode');
+
+const enableDarkMode = () =>{
+   toggleBtn.classList.replace('fa-sun', 'fa-moon');
+   body.classList.add('dark');
+   localStorage.setItem('dark-mode', 'enabled');
+}
+
+const disableDarkMode = () =>{
+   toggleBtn.classList.replace('fa-moon', 'fa-sun');
+   body.classList.remove('dark');
+   localStorage.setItem('dark-mode', 'disabled');
+}
+
+if(darkMode === 'enabled'){
+   enableDarkMode();
+}
+
+toggleBtn.onclick = (e) =>{
+   darkMode = localStorage.getItem('dark-mode');
+   if(darkMode === 'disabled'){
+      enableDarkMode();
+   }else{
+      disableDarkMode();
+   }
+}
+
+let profile = document.querySelector('.header .flex .profile');
+
+document.querySelector('#user-btn').onclick = () =>{
+   profile.classList.toggle('active');
+   search.classList.remove('active');
+}
+
+let search = document.querySelector('.header .flex .search-form');
+
+document.querySelector('#search-btn').onclick = () =>{
+   search.classList.toggle('active');
+   profile.classList.remove('active');
+}
+
+let sideBar = document.querySelector('.side-bar');
+
+document.querySelector('#menu-btn').onclick = () =>{
+   sideBar.classList.toggle('active');
+   body.classList.toggle('active');
+}
+
+document.querySelector('#close-btn').onclick = () =>{
+   sideBar.classList.remove('active');
+   body.classList.remove('active');
+}
+
+window.onscroll = () =>{
+   profile.classList.remove('active');
+   search.classList.remove('active');
+
+   if(window.innerWidth < 1200){
+      sideBar.classList.remove('active');
+      body.classList.remove('active');
+   }
+}
+
+window.addEventListener("load", function(){
+    setTimeout(
+        function open(event){
+            document.querySelector(".popup").style.display = "block";
+        },
+        2000 
+    )
+});
+
+
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+
+});
+function generate(){
+    var quotes={
+        "― Annoy":"“Making someone angry.”",
+        "― Calm":"“Free of any disturbance.”",
+       "― Consequences":"“An unpleasant or unwelcome result of an action.”",
+       "―Investigate":"“Carry out an inquiry to discover and examine facts to establish the truth”",
+        "―Ignore": "“Fail to consider something important”",
+    }
+var authors=Object.keys(quotes);
+var author=authors[Math.floor(Math.random() * authors.length )];
+var quote=quotes[author];
+document.getElementById("quote").innerHTML=quote;
+document.getElementById("author").innerHTML=author;
+}
+
+
+        </script>
+
+    </body>
+</html>

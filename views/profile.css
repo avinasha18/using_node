@@ -1,0 +1,106 @@
+.user-profile .info{
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding: 2rem;
+ }
+ 
+ .user-profile .info .user{
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+ }
+ 
+ .user-profile .info .user img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+ }
+ 
+ .user-profile .info .user h3{
+    font-size: 2rem;
+    color: var(--black);
+ }
+ 
+ .user-profile .info .user p{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    padding: .3rem 0;
+ }
+ 
+ .profile-grid {
+   display: grid;
+   column-gap: 5px;
+   row-gap: 5px;
+   grid-template-columns: 1fr 1fr 1fr;
+ }
+ .profile-grid div {
+   background-color: #e9e7fd;
+   border-radius: 20px;
+   text-align: center;
+   padding: 5px;
+   height: 150px;
+   font-size: 17px;
+ }
+ .profile-grid div h1{
+   margin: 5px;
+   font-size: 21px;
+   color: #000;
+}
+.profile-grid div p {
+   color: gray;
+   margin: 8px 0;
+   font-size: 18px;
+   font-weight: bold;
+}
+.profile-grid div span {
+   color: #5a1919;
+}
+
+
+
+.form-container{
+   min-height: calc(100vh - 20rem);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.form-container form{
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding: 2rem;
+   width: 50rem;
+}
+
+.form-container form h3{
+   font-size: 2.5rem;
+   text-transform: capitalize;
+   color: var(--black);
+   text-align: center;
+}
+
+.form-container form p{
+   font-size: 1.7rem;
+   color: var(--light-color);
+   padding-top: 1rem;
+}
+
+.form-container form p span{
+   color: var(--red);
+}
+
+.form-container form .box{
+   font-size: 1.8rem;
+   color: var(--black);
+   border-radius: .5rem;
+   padding: 1.4rem;
+   background-color: var(--light-bg);
+   width: 100%;
+   margin: 1rem 0;
+}
+
+
+
+

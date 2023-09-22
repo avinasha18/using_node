@@ -1,0 +1,125 @@
+.head{
+    margin-top: 10px;
+    font-size: 3rem;
+    color:var(--black);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    text-transform: capitalize;
+ }
+ .course .details {
+    display:-moz-inline-grid;
+    font-size: medium;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.course .details p {
+    display: flex;
+    font-size: medium;
+    margin-left: 4px;
+}
+.boxes .course img {
+    width: 80.7ex;
+    height: 17rem;
+
+}
+.point{
+    margin-left: 19px;
+    font-size: medium;
+}
+.flex_box .boxes {
+    background:#fff;
+    opacity: 0.9;
+    height: 40rem;
+    width: 39rem;
+}
+.inline-btnn {
+    display: inline-block !important ;
+    border-radius: .5rem;
+    color:#fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    padding:1rem 3rem;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: var(--main-color);
+    margin-left: 20px;
+    width: 35rem;
+}
+.inline-btnn:hover {
+    background-color: var(--black);
+    color: var(--white);
+
+}
+.btnn {
+    display: block;
+    width: 15%;
+    background-color: var(--main-color);
+    border-radius: 3rem;
+    color:#fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    padding:1rem 3rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.btnn:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+.crs {
+    background-color: #fff;
+    max-width: 100% !important;
+    height: 19rem;
+    box-shadow: 8px  6px 3px rgba(138, 134, 134, 0.397);
+}
+.crs p {
+    font-size: 16px;
+}
+.crs h3 {
+    font-size: 20px;
+    margin-left: 20rem;
+    margin-top: -3.5rem;
+}
+.content {
+    background: #ffffffcb;
+    height: 100% !important;
+}
+.content .about {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.content .video-container {
+    margin-left: 60rem;
+    margin-top: 10px;
+    width: 100% !important;
+    position: relative;
+    height: 80%;
+}
+.video {
+    position: absolute; 
+    left: 0; 
+}
+.video.right {
+    left: auto;
+    right: 0;
+}
+.inf-content p {
+    margin: 15px 25px -6px 25px;
+}
+.inf-content {
+    width: 49%;
+    font-size: 15px;
+    
+}
+.inf-content h3 {
+    margin-left: 25px;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.725);
+}
+.inf-content ul {
+    margin-left: 25px;
+}

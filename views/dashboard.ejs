@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    </head>
+    <body>
+
+        <header class="header">
+   
+            <section class="flex">
+         
+               <a href="home" class="logo">Elite Six</a>
+         
+               <form action="search" method="post" class="search-form">
+                  <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+                  <button type="submit" class="fas fa-search"></button>
+               </form>
+               <div class="google_translate_option" id="google_translate_element"></div>
+
+               <div class="icons">
+                  <div id="menu-btn" class="fas fa-bars"></div>
+                  <div id="search-btn" class="fas fa-search"></div>
+                  <div id="user-btn" class="fas fa-user"></div>
+                  <div id="toggle-btn" class="fas fa-sun"></div>
+               </div>
+         
+               <div class="profile">
+                  <img src="Images/Student profile.png" class="image" alt="">
+                  <h3 class="name">Harsha</h3>
+                  <p class="role">Student</p>
+                  <a href="profile" class="btn">View Profile</a>
+                  <div class="flex-btn">
+                     <a href="first" class="option-btn">Logout</a>
+                  </div>
+               </div>
+         
+            </section>
+         
+         </header>   
+         
+         <div class="side-bar">
+         
+            <div id="close-btn">
+               <i class="fas fa-times"></i>
+            </div>
+         
+            <div class="profile">
+               <img src="Images/Student profile.png" class="image" alt="">
+               <h3 class="name">Harsha</h3>
+               <p class="role">Student</p>
+               <a href="profile" class="btn">view profile</a>
+            </div>
+         
+            <nav class="navbar">
+               <a href="dashboard"><i class="fas fa-home"></i><span>Dashboard</span></a>
+               <a href="courses"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+               <a href="studymaterials"><i class="fas fa-book"></i><span>Study Materials</span></a>
+               <a href="teacherprofile"><i class="fas fa-chalkboard-user"></i><span>Mentor Details</span></a>
+               <a href="communication"><i class="fas fa-address-book"></i><span>Communication</span></a>
+               <a href="loans"><i class="fa fa-university" aria-hidden="true"></i><span>Loans and Grants</span></a>              
+               <a href="help"><i class="fas fa-info"></i><span>Help</span></a>
+              </nav>
+         
+         </div>
+   <!--Dashboard Section-->
+   <section class="dashboard">
+
+      <div class="container1">
+        
+                
+         <main>
+             <h1>Attendance</h1>
+             <div class="subjects">
+                 <div class="eg">
+                     <h3>ENGLISH</h3>
+                     <h2>12/14</h2>
+                     <div class="progress">
+                         <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                         <div class="number"><p>86%</p></div>
+                     </div>
+                     <small class="text-muted">Last 7 Days</small>
+                 </div>
+                 <div class="mth">
+                     <h3>MATHEMATICS</h3>
+                     <h2>27/29</h2>
+                     <div class="progress">
+                         <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                         <div class="number"><p>93%</p></div>
+                     </div>
+                     <small class="text-muted">Last 7 Days</small>
+                 </div>
+                 <div class="cs">
+                     <h3>SCIENCE</h3>
+                     <h2>27/30</h2>
+                     <div class="progress">
+                         <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                         <div class="number"><p>81%</p></div>
+                     </div>
+                     <small class="text-muted">Last 7 Days</small>
+                 </div>
+             </div>
+            </main>
+          </div>
+          <div class="right-dash">
+            <h1 style="margin-top: 15px;">Todo List</h1>
+            <div class="wrapper">
+               <div class="task-input">
+                 <img src="Images\hamburger.png" alt="icon">
+                 <input type="text" placeholder="Add a new task">
+               </div>
+               <div class="controls">
+                 <div class="filters">
+                   <span class="active" id="all">All</span>
+                   <span id="pending">Pending</span>
+                   <span id="completed">Completed</span>
+                 </div>
+                 <button class="clear-btn">Clear All</button>
+               </div>
+               <ul class="task-box"></ul>
+             </div>
+
+
+          </div>
+         </section>
+         <section style="margin-top: 20px;" class="dashboard">
+     <div class="bar-graph">
+      <!-- partial:index.partial -->
+<h1>Learning Progress</h1>
+<div class="simple-bar-chart">
+  
+  <div class="item" style="--clr: #5EB344; --val: 80">
+    <div class="label">Maths</div>
+    <div class="value">80%</div>
+  </div>
+  
+  <div class="item" style="--clr: #FCB72A; --val: 50">
+    <div class="label">Physics</div>
+    <div class="value">50%</div>
+  </div>
+  
+  <div class="item" style="--clr: #F8821A; --val: <%= 90 %>">
+    <div class="label">Web development</div>
+    <div class="value">99%</div>
+  </div>
+  
+  <div class="item" style="--clr: #E0393E; --val: 15">
+    <div class="label">English</div>
+    <div class="value">15%</div>
+  </div>
+  
+  <div class="item" style="--clr: #963D97; --val: 56">
+    <div class="label">Communication</div>
+    <div class="value">56%</div>
+  </div>
+  
+  <div class="item" style="--clr: #069CDB; --val: 90">
+    <div class="label">Daily Tasks</div>
+    <div class="value">90%</div>
+  </div>
+</div>
+     </div>
+    
+     <div>
+      <h2 class="chart-heading">Overall Progress</h2>
+    <div class="programming-stats">
+      <div class="chart-container">
+        <canvas class="my-chart"></canvas>
+      </div>
+
+      <div class="details">
+        <ul></ul>
+      </div>
+    </div>
+     </div>
+     </section>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+     <script>
+      function googleTranslateElementInit() {
+     new google.translate.TranslateElement({
+       pageLanguage: 'en', // Default page language
+       includedLanguages: 'en,hi,ml,mr,ta,te,ur', // List of supported languages
+       autoDisplay: false, // Disable automatic translation display
+     }, 'google_translate_element');
+   }
+   
+   </script>
+         <script>
+
+
+            let toggleBtn = document.getElementById('toggle-btn');
+            let body = document.body;
+            let darkMode = localStorage.getItem('dark-mode');
+            
+            const enableDarkMode = () =>{
+               toggleBtn.classList.replace('fa-sun', 'fa-moon');
+               body.classList.add('dark');
+               localStorage.setItem('dark-mode', 'enabled');
+            }
+            
+            const disableDarkMode = () =>{
+               toggleBtn.classList.replace('fa-moon', 'fa-sun');
+               body.classList.remove('dark');
+               localStorage.setItem('dark-mode', 'disabled');
+            }
+            
+            if(darkMode === 'enabled'){
+               enableDarkMode();
+            }
+            
+            toggleBtn.onclick = (e) =>{
+               darkMode = localStorage.getItem('dark-mode');
+               if(darkMode === 'disabled'){
+                  enableDarkMode();
+               }else{
+                  disableDarkMode();
+               }
+            }
+            
+            let profile = document.querySelector('.header .flex .profile');
+            
+            document.querySelector('#user-btn').onclick = () =>{
+               profile.classList.toggle('active');
+               search.classList.remove('active');
+            }
+            
+            let search = document.querySelector('.header .flex .search-form');
+            
+            document.querySelector('#search-btn').onclick = () =>{
+               search.classList.toggle('active');
+               profile.classList.remove('active');
+            }
+            
+            let sideBar = document.querySelector('.side-bar');
+            
+            document.querySelector('#menu-btn').onclick = () =>{
+               sideBar.classList.toggle('active');
+               body.classList.toggle('active');
+            }
+            
+            document.querySelector('#close-btn').onclick = () =>{
+               sideBar.classList.remove('active');
+               body.classList.remove('active');
+            }
+            
+            window.onscroll = () =>{
+               profile.classList.remove('active');
+               search.classList.remove('active');
+            
+               if(window.innerWidth < 1200){
+                  sideBar.classList.remove('active');
+                  body.classList.remove('active');
+               }
+            }
+            const taskInput = document.querySelector(".task-input input"),
+filters = document.querySelectorAll(".filters span"),
+clearAll = document.querySelector(".clear-btn"),
+taskBox = document.querySelector(".task-box");
+
+let editId,
+isEditTask = false,
+todos = JSON.parse(localStorage.getItem("todo-list"));
+
+filters.forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelector("span.active").classList.remove("active");
+        btn.classList.add("active");
+        showTodo(btn.id);
+    });
+});
+
+function showTodo(filter) {
+    let liTag = "";
+    if(todos) {
+        todos.forEach((todo, id) => {
+            let completed = todo.status == "completed" ? "checked" : "";
+            if(filter == todo.status || filter == "all") {
+                liTag += `<li class="task">
+                            <label for="${id}">
+                                <input onclick="updateStatus(this)" type="checkbox" id="${id}" ${completed}>
+                                <p class="${completed}">${todo.name}</p>
+                            </label>
+                            <div class="settings">
+                                <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
+                                <ul class="task-menu">
+                                    <li onclick='editTask(${id}, "${todo.name}")'><i class="uil uil-pen"></i>Edit</li>
+                                    <li onclick='deleteTask(${id}, "${filter}")'><i class="uil uil-trash"></i>Delete</li>
+                                </ul>
+                            </div>
+                        </li>`;
+            }
+        });
+    }
+    taskBox.innerHTML = liTag || `<span>You don't have any task here</span>`;
+    let checkTask = taskBox.querySelectorAll(".task");
+    !checkTask.length ? clearAll.classList.remove("active") : clearAll.classList.add("active");
+    taskBox.offsetHeight >= 300 ? taskBox.classList.add("overflow") : taskBox.classList.remove("overflow");
+}
+showTodo("all");
+
+function showMenu(selectedTask) {
+    let menuDiv = selectedTask.parentElement.lastElementChild;
+    menuDiv.classList.add("show");
+    document.addEventListener("click", e => {
+        if(e.target.tagName != "I" || e.target != selectedTask) {
+            menuDiv.classList.remove("show");
+        }
+    });
+}
+
+function updateStatus(selectedTask) {
+    let taskName = selectedTask.parentElement.lastElementChild;
+    if(selectedTask.checked) {
+        taskName.classList.add("checked");
+        todos[selectedTask.id].status = "completed";
+    } else {
+        taskName.classList.remove("checked");
+        todos[selectedTask.id].status = "pending";
+    }
+    localStorage.setItem("todo-list", JSON.stringify(todos));
+}
+
+function editTask(taskId, textName) {
+    editId = taskId;
+    isEditTask = true;
+    taskInput.value = textName;
+    taskInput.focus();
+    taskInput.classList.add("active");
+}
+
+function deleteTask(deleteId, filter) {
+    isEditTask = false;
+    todos.splice(deleteId, 1);
+    localStorage.setItem("todo-list", JSON.stringify(todos));
+    showTodo(filter);
+}
+
+clearAll.addEventListener("click", () => {
+    isEditTask = false;
+    todos.splice(0, todos.length);
+    localStorage.setItem("todo-list", JSON.stringify(todos));
+    showTodo();
+});
+
+taskInput.addEventListener("keyup", e => {
+    let userTask = taskInput.value.trim();
+    if(e.key == "Enter" && userTask) {
+        if(!isEditTask) {
+            todos = !todos ? [] : todos;
+            let taskInfo = {name: userTask, status: "pending"};
+            todos.push(taskInfo);
+        } else {
+            isEditTask = false;
+            todos[editId].name = userTask;
+        }
+        taskInput.value = "";
+        localStorage.setItem("todo-list", JSON.stringify(todos));
+        showTodo(document.querySelector("span.active").id);
+    }
+});
+const chartData = {
+  labels: ["Academics", "Tech", "GK", "Communication", "Others"],
+  data: [30, 17, 10, 7, 36],
+};
+
+const myChart = document.querySelector(".my-chart");
+const ul = document.querySelector(".programming-stats .details ul");
+
+new Chart(myChart, {
+  type: "doughnut",
+  data: {
+    labels: chartData.labels,
+    datasets: [
+      {
+        label: "Language Popularity",
+        data: chartData.data,
+      },
+    ],
+  },
+  options: {
+    borderWidth: 10,
+    borderRadius: 2,
+    hoverBorderWidth: 0,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  },
+});
+
+const populateUl = () => {
+  chartData.labels.forEach((l, i) => {
+    let li = document.createElement("li");
+    li.innerHTML = `${l}: <span class='percentage'>${chartData.data[i]}%</span>`;
+    ul.appendChild(li);
+  });
+};
+
+populateUl();
+
+
+            </script>
+    </body>
+</html>

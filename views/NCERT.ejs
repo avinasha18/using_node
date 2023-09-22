@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart India Hackathon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">    
+    <link rel="stylesheet" href="NCERT.css">
+</head>
+<body>
+   <header class="header">
+   
+      <section class="flex">
+   
+         <a href="home" class="logo">Elite Six</a>
+   
+         <form action="search" method="post" class="search-form">
+            <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+            <button type="submit" class="fas fa-search"></button>
+         </form>
+   
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+   
+         <div class="profile">
+            <img src="Images/Student profile.png" class="image" alt="">
+            <h3 class="name">Harsha</h3>
+            <p class="role">Student</p>
+            <a href="profile" class="btn">View Profile</a>
+            <div class="flex-btn">
+               <a href="first" class="option-btn">Logout</a>
+            </div>
+         </div>
+   
+      </section>
+   
+   </header>   
+   
+   <div class="side-bar">
+   
+      <div id="close-btn">
+         <i class="fas fa-times"></i>
+      </div>
+   
+      <div class="profile">
+         <img src="Images/Student profile.png" class="image" alt="">
+         <h3 class="name">Harsha</h3>
+         <p class="role">Student</p>
+         <a href="profile" class="btn">view profile</a>
+      </div>
+   
+      <nav class="navbar">
+         <a href="dashboard"><i class="fas fa-home"></i><span>Dashboard</span></a>
+         <a href="courses"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+         <a href="studymaterials"><i class="fas fa-book"></i><span>Study Materials</span></a>
+         <a href="teacherprofile"><i class="fas fa-chalkboard-user"></i><span>Mentor Details</span></a>
+         <a href="communication"><i class="fas fa-address-book"></i><span>Communication</span></a>
+         <a href="loans"><i class="fa fa-university" aria-hidden="true"></i><span>Loans and Grants</span></a>              
+         <a href="help"><i class="fas fa-info"></i><span>Help</span></a>
+        </nav>
+   
+   </div>
+     <section style="margin-top: 30px;" class="flex_box">
+        <div class="project-box-wrapper">
+            <div class="project-box" style="background-color: #e9e7fd;">
+            <div class="project-box-header">
+                <span>September 1, 2023</span>
+                
+            </div>
+            <div class="project-box-content-header">
+                <p class="box-content-header">
+                    <a href="Class12">Class 12</a>
+                </p>
+                <p class="box-content-subheader">Materials</p>
+            </div>
+            </div>
+        </div>
+        <div class="project-box-wrapper">
+            <div class="project-box" style="background-color: #eaffd3;">
+            <div class="project-box-header">
+                <span>September 1, 2023</span>
+                
+            </div>
+            <div class="project-box-content-header">
+                <p class="box-content-header">Class 11</p>
+                <p class="box-content-subheader">Materials</p>
+            </div>
+            </div>    
+        </div>
+        <div class="project-box-wrapper">
+            <div class="project-box" style="background-color: #c5d8fa;">
+                <div class="project-box-header">
+                    <span>September 1, 2023</span>
+                    <div class="more-wrapper"></div>
+                </div>
+                <div class="project-box-content-header">
+                    <p class="box-content-header">Class 10</p>
+                    <p class="box-content-subheader">Materials</p>
+                </div>
+            </div>
+        </div>
+        <div class="project-box-wrapper">
+        <div class="project-box" style="background-color: #fdd9e5;">
+            <div class="project-box-header">
+            <span>September 1, 2023</span>
+            </div>
+            <div class="project-box-content-header">
+            <p class="box-content-header">Class 9</p>
+            <p class="box-content-subheader">Materials</p>
+            </div>
+        </div>
+        </div>
+        <div class="project-box-wrapper">
+        <div class="project-box" style="background-color: #c8f7dc;">
+            <div class="project-box-header">
+            <span>September 1, 2023</span>
+
+            </div>
+            <div class="project-box-content-header">
+            <p class="box-content-header">Class 8</p>
+            <p class="box-content-subheader">Materials</p>
+            </div>
+            </div>
+        </div>
+        <div class="project-box-wrapper">
+        <div class="project-box" style="background-color: #d5deff;">
+            <div class="project-box-header">
+            <span>September 1, 2023</span>
+            
+            </div>
+            <div class="project-box-content-header">
+            <p class="box-content-header">Class 7</p>
+            <p class="box-content-subheader">Materials</p>
+            </div>
+        </div>
+        </div>
+     </section>
+     <script>
+
+        let toggleBtn = document.getElementById('toggle-btn');
+        let body = document.body;
+        let darkMode = localStorage.getItem('dark-mode');
+        
+        const enableDarkMode = () =>{
+           toggleBtn.classList.replace('fa-sun', 'fa-moon');
+           body.classList.add('dark');
+           localStorage.setItem('dark-mode', 'enabled');
+        }
+        
+        const disableDarkMode = () =>{
+           toggleBtn.classList.replace('fa-moon', 'fa-sun');
+           body.classList.remove('dark');
+           localStorage.setItem('dark-mode', 'disabled');
+        }
+        
+        if(darkMode === 'enabled'){
+           enableDarkMode();
+        }
+        
+        toggleBtn.onclick = (e) =>{
+           darkMode = localStorage.getItem('dark-mode');
+           if(darkMode === 'disabled'){
+              enableDarkMode();
+           }else{
+              disableDarkMode();
+           }
+        }
+        
+        let profile = document.querySelector('.header .flex .profile');
+        
+        document.querySelector('#user-btn').onclick = () =>{
+           profile.classList.toggle('active');
+           search.classList.remove('active');
+        }
+        
+        let search = document.querySelector('.header .flex .search-form');
+        
+        document.querySelector('#search-btn').onclick = () =>{
+           search.classList.toggle('active');
+           profile.classList.remove('active');
+        }
+        
+        let sideBar = document.querySelector('.side-bar');
+        
+        document.querySelector('#menu-btn').onclick = () =>{
+           sideBar.classList.toggle('active');
+           body.classList.toggle('active');
+        }
+        
+        document.querySelector('#close-btn').onclick = () =>{
+           sideBar.classList.remove('active');
+           body.classList.remove('active');
+        }
+        
+        window.onscroll = () =>{
+           profile.classList.remove('active');
+           search.classList.remove('active');
+        
+           if(window.innerWidth < 1200){
+              sideBar.classList.remove('active');
+              body.classList.remove('active');
+           }
+        }
+        
+        </script>
+</body>
+</html>

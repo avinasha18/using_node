@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="mentorsection.css">
+    
+    <link rel="stylesheet" href="mentordashboard.css">
+    <!-- Boxicons CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-html5 icon'></i>
+        <div class="logo_name">Mentor</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      
+      <li>
+        <a href="mentordashboard.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+       <a href="#">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">User</span>
+       </a>
+       <span class="tooltip">User</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">Messages</span>
+       </a>
+       <span class="tooltip">Messages</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Analytics</span>
+       </a>
+       <span class="tooltip">Analytics</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">File Manager</span>
+       </a>
+       <span class="tooltip">Files</span>
+     </li>
+     
+     
+     <li class="profile">
+         <div class="profile-details">
+           <img src=""C:\Users\chandra shekhar\OneDrive\Desktop\documents\Avinasha\Images\mentor 1.png"" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Virat Kohli</div>
+             <div class="job">Web designer</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      <div class="text">
+
+        <div class="main-top">
+            <h1>Skills</h1>
+          </div>
+         <div class="main-skills">
+        <div class="card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Web developemt</h3>
+          <p>Students Enrolled : 2343</p>
+          <button>View</button>
+        </div>
+        <div class="card">
+          <i class="fab fa-plus"></i>
+          <h3>Engineering Maths</h3>
+          <p>Students Enrolled : 125</p>
+          <button>View</button>
+        </div>
+        <div class="card">
+          <i class="fas fa-language"></i>
+          <h3>English</h3>
+          <p>Students Enrolled : 245</p>
+          <button>View</button>
+        </div>
+        <div class="card">
+          <i class="fas fa-brain"></i>
+          <h3>GK</h3>
+          <p>Students Enrolled : 425</p>
+          <button>View</button>
+        </div>
+      </div>
+
+
+      </div>
+      <div class="second-part">
+      <div class="graph-container">
+        <figure class="highcharts-figure">
+           <div id="container"></div>
+          
+
+     </div>
+     <div class="right-side-container">
+
+       <div style="margin: 40px 30px 20px 10px;">
+            <h1 style="text-align: center; margin-right: 50px;">Quick Options</h1>
+                <div class="each-box-container" style="background-color: #11101D;">
+                  <i class="fa-solid fa-note-sticky"></i>
+                  <p>Send Notes</p>
+                </div>
+           
+            <div  class="each-box-container" style="background-color: #dcec4a;color: #11101D;">
+              <i class="fa-solid fa-video"></i>
+              <a><p>Upload Course</p></a>
+            </div>
+            <div  class="each-box-container" style="background-color: #5c569d;">
+              <i class="fa-regular fa-chart-bar"></i>
+              <p>Student Progress</p>
+            </div>
+        </div>
+
+     </div>
+      </div>
+  </section>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script>
+     const chart = Highcharts.chart('container', {
+     
+         chart: {
+             type: 'column'
+         },
+     
+         title: {
+             text: 'Your impact at a glance'
+         },
+     
+         subtitle: {
+             text: 'Enrollments,Courses,Reviews'
+         },
+     
+         legend: {
+             align: 'right',
+             verticalAlign: 'middle',
+             layout: 'vertical'
+         },
+     
+         xAxis: {
+             categories: ['June', 'July', 'August'],
+             labels: {
+                 x: -10
+             }
+         },
+     
+         yAxis: {
+             allowDecimals: false,
+             title: {
+                 text: 'Numbers'
+             }
+         },
+     
+         series: [{
+             name: 'Enrollments',
+             data: [38, 51, 34]
+         }, {
+             name: 'Courses',
+             data: [31, 26, 27]
+         }, {
+             name: 'Reviews',
+             data: [38, 42, 41]
+         }],
+     
+         responsive: {
+             rules: [{
+                 condition: {
+                     maxWidth: 500
+                 },
+                 chartOptions: {
+                     legend: {
+                         align: 'center',
+                         verticalAlign: 'bottom',
+                         layout: 'horizontal'
+                     },
+                     yAxis: {
+                         labels: {
+                             align: 'left',
+                             x: 0,
+                             y: -5
+                         },
+                         title: {
+                             text: null
+                         }
+                     },
+                     subtitle: {
+                         text: null
+                     },
+                     credits: {
+                         enabled: false
+                     }
+                 }
+             }]
+         }
+     });
+     let sizeofel =  document.getElementById('small');
+     
+     document.getElementById('small').addEventListener('click', function () {
+         chart.setSize(400);
+     });
+     
+     document.getElementById('large').addEventListener('click', function () {
+         chart.setSize(600);
+     });
+     
+     document.getElementById('auto').addEventListener('click', function () {
+         chart.setSize(null);
+     });
+     </script>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+  sidebar.classList.add("open");
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+
+</body>
+</html>

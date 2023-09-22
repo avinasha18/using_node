@@ -1,0 +1,141 @@
+.contact{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background-size: cover;
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+
+}
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color: #ff0000;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.wrapper{
+    max-width: 75%;
+    margin:auto;
+
+}
+.wrapper > p,
+.wrapper > h1{
+    margin:1.5rem 0;
+    text-align: center;
+}
+.wrapper > h1{
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+.accordion{
+    background-color: white;
+    color:rgba(0,0,0,0.8);
+    cursor: pointer;
+    font-size: 17px;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.accordion i{
+    font-size: 17px;
+}
+.active,.accordion:hover{
+    background-color: #f1f7f5;
+
+}
+.pannel{
+    padding: 0 2rem 2.5rem.2rem;
+    background-color: white;
+    overflow: hidden;
+    background-color: #f1f7f5;
+    display: none;
+}
+.pannel p{
+    color: rgba(0,0,0,0.7);
+    font-size: 15px;
+    line-height: 1.4;
+    margin-left: 10px;
+}
+.faq{
+    border: 1px solid rgba(0,0,0,0.2);
+    margin: 10px 0;
+}
+.faq.active{
+     border: none;
+
+}

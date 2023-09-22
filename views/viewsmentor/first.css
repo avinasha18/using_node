@@ -1,0 +1,128 @@
+
+body{
+  font-family: 'Nunito', sans-serif;
+  padding-top: 200px;
+  box-sizing: border-box;  
+height: 100vh;
+width: 100%;
+margin: 0;
+background-image: url("Images/pens\ homepage.jpg");
+background-size: 100%;
+}
+.header {
+  background-color: rgb(255, 255, 255);
+  padding-top: 30px;
+  position: fixed;
+  height: 80px;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: none;
+  justify-content: center;
+  align-items: center;
+
+}
+.left-section {
+  position: absolute;
+  left: 8px;
+  color: #333333;
+  text-align: center;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.right-section {
+  display: flex;
+  position: absolute;
+  right: 40px;
+  color: #333333;
+  text-align: center;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.header a{
+  color: #333333;
+
+  margin: 0;
+  font-size: 19px;
+}
+.right-section div{
+  text-align: center;
+  padding: 10px;
+  margin: 0 20px;
+  border-radius: 30px;
+  background-color: white;
+  margin-bottom: 5px;
+  
+}
+.left-section-image {
+  text-align: center;
+  margin: 0 20px;
+  border-radius: 30px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+.login-containers {
+  display: flex;
+  justify-content: center;
+  
+  
+  
+}
+.student-container,.mentor-container,.public-container {
+  width: 300px;
+  background-color: rgb(62, 36, 36);
+  height: 420px;
+  border-radius: 50px;
+  text-align: center;
+  margin : 10px 80px;
+}
+.login-containers div{
+  padding: 20px;
+}
+.login-containers img{
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  border-style : solid;
+  border-color: inset rgb(119, 111, 111);
+  border-width: 5px;
+  
+
+}
+
+.login-containers p{
+  font-size: 28px;
+  font-weight: 500;
+  color: #eed0d0;
+}
+.login-containers button{
+  text-align: center;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 25px;
+  color: #333333;
+}
+ nav div a{
+  position: relative;
+  cursor: pointer;
+
+}
+ nav div a::after{
+  content:'';
+  position: absolute ;
+  width: 0;
+  background: #000;
+  height: 4px;
+  bottom: -6px;
+  left: 0;
+ }
+ nav div a:hover::after{
+  width: 100%;
+  transition: 0.3s;
+ }
+ html{
+  scroll-behavior: smooth !important;
+ }
